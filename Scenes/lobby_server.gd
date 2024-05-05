@@ -3,7 +3,7 @@ extends Control
 const PORT = 9999
 
 @export var database_file_path = "res://Database/Database.json"
-
+@export_file("*.tscn") var quiz_screen_scene_path = "res://Scenes/quiz_panel.tscn"
 # high-level network interface for sending and receiving data between clients and the server and making RPCs
 var peer = ENetMultiplayerPeer.new()
 
@@ -70,11 +70,21 @@ func authenticate_player(user, password):
 		rpc_id(peer_id, "authentication_succeed", token)
 
 
-@rpc("call_remote")
+@rpc
 func authentication_failed(error_message):
 	pass
 
 
-@rpc("call_remote")
+@rpc
 func authentication_succeed(session_token):
 	pass
+
+
+@rpc
+func add_logged_player(player_name):
+	pass
+
+@rpc("any_peer","call_remote")
+func start_game():
+	rpc("start_game")
+	get_tree().change_scene_to_file(quiz_screen_scene_path)

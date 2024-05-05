@@ -1,5 +1,8 @@
+Timer
 Button
+Control
 Label
+ColorRect
 LineEdit
 HBoxContainer
 ScrollContainer

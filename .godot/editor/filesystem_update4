@@ -1,7 +1,12 @@
-res://Scenes/avatar_card.tscn
 res://Scenes/lobby_login.tscn
+res://Scenes/lobby_login.gd
+res://Scenes/lobby_server.gd
+res://Scenes/quiz_screen_server.tscn
+res://Scenes/quiz_panel.tscn
+res://Scenes/wait_label.gd
+res://Scenes/wait_label.tscn
 res://Scenes/lobby_server.tscn
+res://Scenes/avatar_card.tscn
 res://Scenes/main_menu.tscn
-res://Scenes/chat_control.tscn
-res://Scenes/chat_client.tscn
 res://Scenes/lobby_client.tscn
+res://Scenes/quiz_screen_server.gd

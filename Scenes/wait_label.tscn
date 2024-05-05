@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dykcuqm15ttsj"]
+
+[ext_resource type="Script" path="res://Scenes/wait_label.gd" id="1_gn3ii"]
+
+[node name="WaitLabel" type="Label"]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_top = 70.0
+offset_right = 62.0
+offset_bottom = 93.0
+grow_horizontal = 2
+text = "Next round in..."
+script = ExtResource("1_gn3ii")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

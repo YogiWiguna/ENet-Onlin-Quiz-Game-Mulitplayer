@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://bodj3g8e2pk5t"]
+
+[ext_resource type="Script" path="res://Scenes/quiz_screen_server.gd" id="1_1hafh"]
+[ext_resource type="PackedScene" uid="uid://dh0gm45y4q7uv" path="res://Scenes/quiz_panel.tscn" id="1_glgt6"]
+[ext_resource type="PackedScene" uid="uid://dykcuqm15ttsj" path="res://Scenes/wait_label.tscn" id="2_w00fv"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1hafh")
+database_file = null
+turn_delay_in_seconds = null
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 39.0
+offset_bottom = 54.0
+grow_horizontal = 2
+text = "I'm Server"
+
+[node name="QuizPanel" parent="." instance=ExtResource("1_glgt6")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 351.0
+offset_bottom = 204.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="WaitLabel" parent="." instance=ExtResource("2_w00fv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 23.0
+grow_horizontal = 1
