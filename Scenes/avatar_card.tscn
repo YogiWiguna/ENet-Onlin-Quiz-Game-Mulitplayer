@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0h32mi1kvxu2"]
+
+[ext_resource type="Script" path="res://Scenes/avatar_card.gd" id="1_4aevu"]
+[ext_resource type="Texture2D" uid="uid://bf2n8w81tdcff" path="res://Avatars/female_idle.png" id="1_icpsv"]
+
+[node name="AvatarCard" type="Control"]
+custom_minimum_size = Vector2(170, 270)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 170.0
+offset_bottom = 270.0
+script = ExtResource("1_4aevu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 218.0
+texture = ExtResource("1_icpsv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 229.0
+offset_right = 110.0
+offset_bottom = 252.0
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://cavetid0o2xm7"]
+
+[ext_resource type="Script" path="res://Scenes/lobby_login.gd" id="1_e1ndl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gy14w"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e1ndl")
+lobby_screen_scene = "res://Scenes/lobby_client.tscn"
+
+[node name="Username" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -59.0
+offset_right = 54.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "username"
+
+[node name="Password" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -15.0
+offset_right = 52.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "password"
+secret = true
+
+[node name="ErrorLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -94.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_gy14w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoginButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = 36.0
+offset_right = 75.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Login"
+
+[connection signal="text_submitted" from="Username" to="." method="_on_username_text_submitted"]
+[connection signal="text_submitted" from="Password" to="." method="_on_password_text_submitted"]
+[connection signal="pressed" from="LoginButton" to="." method="_on_login_button_pressed"]
